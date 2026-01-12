@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.1.5)  6 JAN 2026 00:44
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.1.5)  12 JAN 2026 04:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -24,13 +24,39 @@ File: size12.clo 2025/01/22 v1.4n Standard LaTeX file (size option)
 \belowcaptionskip=\skip50
 \bibindent=\dimen148
 )
-(C:\Users\tonda\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.sty
-Package: geometry 2020/01/02 v5.9 Page Geometry
+(C:\Users\tonda\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
+Package: graphicx 2024/12/31 v1.2e Enhanced LaTeX Graphics (DPC,SPQR)
 
 (C:\Users\tonda\AppData\Local\Programs\MiKTeX\tex/latex/graphics\keyval.sty
 Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
 \KV@toks@=\toks17
 )
+(C:\Users\tonda\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
+Package: graphics 2024/08/06 v1.4g Standard LaTeX Graphics (DPC,SPQR)
+
+(C:\Users\tonda\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty
+Package: trig 2023/12/02 v1.11 sin cos tan (DPC)
+)
+(C:\Users\tonda\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graphics.c
+fg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 106.
+
+(C:\Users\tonda\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.def
+File: pdftex.def 2025/09/29 v1.2d Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen149
+\Gin@req@width=\dimen150
+)
+(C:\Users\tonda\AppData\Local\Programs\MiKTeX\tex/latex/letltxmacro\letltxmacro
+.sty
+Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
+) (C:\Users\tonda\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc.sty
+Package: fontenc 2025/07/18 v2.1d Standard LaTeX package
+) (C:\Users\tonda\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+
 (C:\Users\tonda\AppData\Local\Programs\MiKTeX\tex/generic/iftex\ifvtex.sty
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 
@@ -40,14 +66,14 @@ Package: iftex 2024/12/12 v1.0g TeX engine tests
 \Gm@cnth=\count284
 \Gm@cntv=\count285
 \c@Gm@tempcnt=\count286
-\Gm@bindingoffset=\dimen149
-\Gm@wd@mp=\dimen150
-\Gm@odd@mp=\dimen151
-\Gm@even@mp=\dimen152
-\Gm@layoutwidth=\dimen153
-\Gm@layoutheight=\dimen154
-\Gm@layouthoffset=\dimen155
-\Gm@layoutvoffset=\dimen156
+\Gm@bindingoffset=\dimen151
+\Gm@wd@mp=\dimen152
+\Gm@odd@mp=\dimen153
+\Gm@even@mp=\dimen154
+\Gm@layoutwidth=\dimen155
+\Gm@layoutheight=\dimen156
+\Gm@layouthoffset=\dimen157
+\Gm@layoutvoffset=\dimen158
 \Gm@dimlist=\toks18
 
 (C:\Users\tonda\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg))
@@ -69,7 +95,7 @@ LaTeX Encoding Info:    Ignoring declaration for text command \IJ (encoding ?)
 on input line 2076.
 LaTeX Encoding Info:    Ignoring declaration for text command \SS (encoding ?) 
 on input line 2101.
-\U@D=\dimen157
+\U@D=\dimen159
 \l@unhyphenated=\language79
 
 (C:\Users\tonda\AppData\Local\Programs\MiKTeX\tex/generic/babel\txtbabel.def)
@@ -101,34 +127,12 @@ Package: inputenc 2024/02/08 v1.3d Input encoding file
 \inpenc@prehook=\toks19
 \inpenc@posthook=\toks20
 )
-(C:\Users\tonda\AppData\Local\Programs\MiKTeX\tex/latex/base\fontenc.sty
-Package: fontenc 2025/07/18 v2.1d Standard LaTeX package
-)
 (C:\Users\tonda\AppData\Local\Programs\MiKTeX\tex/latex/cmap\cmap.sty
 Package: cmap 2021/02/06 v1.0j CMap support: searchable PDF
 
 
 Package cmap Warning: fontenc already loaded - some fonts may be unprocessed.
 
-) (C:\Users\tonda\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphicx.sty
-Package: graphicx 2024/12/31 v1.2e Enhanced LaTeX Graphics (DPC,SPQR)
-(C:\Users\tonda\AppData\Local\Programs\MiKTeX\tex/latex/graphics\graphics.sty
-Package: graphics 2024/08/06 v1.4g Standard LaTeX Graphics (DPC,SPQR)
-
-(C:\Users\tonda\AppData\Local\Programs\MiKTeX\tex/latex/graphics\trig.sty
-Package: trig 2023/12/02 v1.11 sin cos tan (DPC)
-)
-(C:\Users\tonda\AppData\Local\Programs\MiKTeX\tex/latex/graphics-cfg\graphics.c
-fg
-File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
-)
-Package graphics Info: Driver file: pdftex.def on input line 106.
-
-(C:\Users\tonda\AppData\Local\Programs\MiKTeX\tex/latex/graphics-def\pdftex.def
-File: pdftex.def 2025/09/29 v1.2d Graphics/color driver for pdftex
-))
-\Gin@req@height=\dimen158
-\Gin@req@width=\dimen159
 )
 (C:\Users\tonda\AppData\Local\Programs\MiKTeX\tex/latex/caption\subcaption.sty
 Package: subcaption 2023/07/28 v1.6b Sub-captions (AR)
@@ -297,7 +301,9 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip51
 )
-(C:\Users\tonda\AppData\Local\Programs\MiKTeX\tex/latex/titlesec\titlesec.sty
+(C:\Users\tonda\AppData\Local\Programs\MiKTeX\tex/latex/needspace\needspace.sty
+Package: needspace 2025/03/13 v1.3e reserve vertical space
+) (C:\Users\tonda\AppData\Local\Programs\MiKTeX\tex/latex/titlesec\titlesec.sty
 Package: titlesec 2025/01/04 v2.17 Sectioning titles
 \ttl@box=\box55
 \beforetitleunit=\skip52
@@ -308,7 +314,6 @@ Package: titlesec 2025/01/04 v2.17 Sectioning titles
 \titlewidth=\dimen174
 \titlewidthlast=\dimen175
 \titlewidthfirst=\dimen176
-
 (C:\Users\tonda\AppData\Local\Programs\MiKTeX\tex/latex/titlesec\titleps.sty))
 (C:\Users\tonda\AppData\Local\Programs\MiKTeX\tex/latex/tocloft\tocloft.sty
 Package: tocloft 2017/08/31 v2.3i parameterised ToC, etc., typesetting
@@ -608,59 +613,24 @@ Package babel Info: 'czech' activates 'czech' shorthands.
 )
 \openout1 = `document.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 141.
-LaTeX Font Info:    ... okay on input line 141.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 141.
-LaTeX Font Info:    ... okay on input line 141.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 141.
-LaTeX Font Info:    ... okay on input line 141.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 141.
-LaTeX Font Info:    ... okay on input line 141.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 141.
-LaTeX Font Info:    ... okay on input line 141.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 141.
-LaTeX Font Info:    ... okay on input line 141.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 141.
-LaTeX Font Info:    ... okay on input line 141.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 141.
-LaTeX Font Info:    ... okay on input line 141.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 141.
-LaTeX Font Info:    ... okay on input line 141.
-
-*geometry* driver: auto-detecting
-*geometry* detected driver: pdftex
-*geometry* verbose mode - [ preamble ] result:
-* driver: pdftex
-* paper: a4paper
-* layout: <same size as paper>
-* layoutoffset:(h,v)=(0.0pt,0.0pt)
-* modes: twoside 
-* h-part:(L,W,R)=(71.13188pt, 455.24411pt, 71.13188pt)
-* v-part:(T,H,B)=(71.13188pt, 702.78308pt, 71.13188pt)
-* \paperwidth=597.50787pt
-* \paperheight=845.04684pt
-* \textwidth=455.24411pt
-* \textheight=702.78308pt
-* \oddsidemargin=-1.1381pt
-* \evensidemargin=-1.1381pt
-* \topmargin=-38.1381pt
-* \headheight=15.0pt
-* \headsep=25.0pt
-* \topskip=12.0pt
-* \footskip=30.0pt
-* \marginparwidth=85.0pt
-* \marginparsep=10.0pt
-* \columnsep=10.0pt
-* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
-* \hoffset=0.0pt
-* \voffset=0.0pt
-* \mag=1000
-* \@twocolumnfalse
-* \@twosidetrue
-* \@mparswitchtrue
-* \@reversemarginfalse
-* (1in=72.27pt=25.4mm, 1cm=28.453pt)
-
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 179.
+LaTeX Font Info:    ... okay on input line 179.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 179.
+LaTeX Font Info:    ... okay on input line 179.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 179.
+LaTeX Font Info:    ... okay on input line 179.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 179.
+LaTeX Font Info:    ... okay on input line 179.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 179.
+LaTeX Font Info:    ... okay on input line 179.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 179.
+LaTeX Font Info:    ... okay on input line 179.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 179.
+LaTeX Font Info:    ... okay on input line 179.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 179.
+LaTeX Font Info:    ... okay on input line 179.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 179.
+LaTeX Font Info:    ... okay on input line 179.
 
 (C:\Users\tonda\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.mk
 ii
@@ -687,168 +657,416 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 fg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: a4paper
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: twoside 
+* h-part:(L,W,R)=(99.58464pt, 426.79135pt, 71.13188pt)
+* v-part:(T,H,B)=(71.13188pt, 702.78308pt, 71.13188pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=426.79135pt
+* \textheight=702.78308pt
+* \oddsidemargin=27.31465pt
+* \evensidemargin=-1.1381pt
+* \topmargin=-38.1381pt
+* \headheight=15.0pt
+* \headsep=25.0pt
+* \topskip=12.0pt
+* \footskip=30.0pt
+* \marginparwidth=85.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidetrue
+* \@mparswitchtrue
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
-Package hyperref Info: Link coloring OFF on input line 141.
- (document.out) (document.out)
+Package hyperref Info: Link coloring OFF on input line 179.
+(document.out) (document.out)
 \@outlinefile=\write3
 \openout3 = `document.out'.
 
 \c@lstlisting=\count343
 \c@mv@tabular=\count344
 \c@mv@boldtabular=\count345
+LaTeX Font Info:    Trying to load font information for T1+phv on input line 18
+6.
 
-(cleaning stray figureversions output...)
-LaTeX Font Info:    Trying to load font information for T1+phv on input line 14
-8.
 (C:\Users\tonda\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\t1phv.fd
 File: t1phv.fd 2020/03/25 scalable font definitions for T1/phv.
 )
-<img/logo-skoly.png, id=140, 356.2911pt x 137.5539pt>
+<img/logo-skoly.png, id=172, 356.2911pt x 137.5539pt>
 File: img/logo-skoly.png Graphic file (type png)
 <use img/logo-skoly.png>
-Package pdftex.def Info: img/logo-skoly.png  used on input line 153.
-(pdftex.def)             Requested size: 227.62206pt x 87.87886pt.
-<img/logo.png, id=142, 602.25pt x 602.25pt>
-File: img/logo.png Graphic file (type png)
-<use img/logo.png>
-Package pdftex.def Info: img/logo.png  used on input line 169.
-(pdftex.def)             Requested size: 318.66948pt x 318.67636pt.
+Package pdftex.def Info: img/logo-skoly.png  used on input line 191.
+(pdftex.def)             Requested size: 192.0548pt x 74.14786pt.
+<img/logo.jpg, id=174, 770.88pt x 255.20343pt>
+File: img/logo.jpg Graphic file (type jpg)
+<use img/logo.jpg>
+Package pdftex.def Info: img/logo.jpg  used on input line 207.
+(pdftex.def)             Requested size: 426.79135pt x 141.28911pt.
 LaTeX Font Info:    Trying to load font information for OT1+ztmcm on input line
- 174.
+ 212.
 
 (C:\Users\tonda\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1ztmcm.fd
 File: ot1ztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ztmcm.
 )<<ot1.cmap>>
 LaTeX Font Info:    Trying to load font information for OML+ztmcm on input line
- 174.
+ 212.
 
 (C:\Users\tonda\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\omlztmcm.fd
 File: omlztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ztmcm.
 )<<oml.cmap>>
 LaTeX Font Info:    Trying to load font information for OMS+ztmcm on input line
- 174.
+ 212.
 
 (C:\Users\tonda\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\omsztmcm.fd
 File: omsztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/ztmcm.
 )<<oms.cmap>>
 LaTeX Font Info:    Trying to load font information for OMX+ztmcm on input line
- 174.
+ 212.
 
 (C:\Users\tonda\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\omxztmcm.fd
 File: omxztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/ztmcm.
 )<<omx.cmap>>
-LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 1
-74.
+LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 2
+12.
 
 (C:\Users\tonda\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 174.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 212.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 174.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 212.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 174.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 212.
 
 [1
 
 {C:/Users/tonda/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{C:/Users/tond
 a/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc} <./img/logo-skoly.
-png> <./img/logo.png>] [2] [3] [4] [5] (document.toc)
+png> <./img/logo.jpg>] [2
+
+]
+Underfull \hbox (badness 1755) in paragraph at lines 225--227
+\T1/ptm/m/n/12 R·d bych touto ces-tou vy-j·-d-∞il up∞ÌmnÈ po-d•-ko-v·nÌ p·-n∑m 
+u£i-te-l∑m Ing. Pe-tru
+ []
+
+[3] [4
+
+]
+Underfull \hbox (badness 1442) in paragraph at lines 252--254
+\T1/ptm/m/n/12 Tato ma-tu-ritnÌ pr·ce se za-b˝v· n·-vrhem a re-a-li-zacÌ mo-bil
+nÌ ge-o-lo-ka£nÌ apli-kace
+ []
+
+
+Underfull \hbox (badness 3343) in paragraph at lines 259--261
+\T1/ptm/m/n/12 Flutter, Ge-o-ca-ching, Su-pa-base, Dart, Ge-o-lo-kace, Mo-bilnÌ
+ apli-kace, Post-gre-SQL,
+ []
+
+[5] [6
+
+] (document.toc)
 \tf@toc=\write4
 \openout4 = `document.toc'.
 
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [1
+ [7] [8
 
 ]
-[2] [3
+Underfull \hbox (badness 1194) in paragraph at lines 301--302
+\T1/ptm/m/n/12 tech-no-lo-gi-emi ne-u-st·le stÌ-rajÌ. Ge-o-ca-ching, ja-ko∫to c
+e-lo-sv•-tov• roz-≤Ì-∞en˝ fe-no-mÈn
+ []
+
+[9
+
+] [10
 
 ]
 Kapitola 1.
-
-Overfull \hbox (5.53561pt too wide) in paragraph at lines 272--272
-|\T1/ptm/b/sc/17.28 1.2 Fra-mework Flut-ter a pro-gra-mo-vacÌ ja-zyk Dart| 
- []
-
-
-Underfull \vbox (badness 2293) has occurred while \output is active []
-
- [4
-
-]
-LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 2
-81.
-
+LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 3
+13.
 (C:\Users\tonda\AppData\Local\Programs\MiKTeX\tex/latex/psnfss\ts1ptm.fd
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 )
-Overfull \hbox (0.94867pt too wide) in paragraph at lines 281--282
-[]\T1/ptm/b/n/12 Domain la-yer: \T1/ptm/m/n/12 J·-dro apli-kace ob-sa-hu-jÌcÌ e
-n-tity a roz-hranÌ re-po-zi-t·∞∑. Je ne-z·-visl· na Flut-
- []
-
-[5]
-Kapitola 2.
-
-Overfull \hbox (8.14366pt too wide) in paragraph at lines 305--305
-|\T1/ptm/b/sc/17.28 2.2 Spe-ci-fi-kace funk£-nÌch a ne-funk£-nÌch po-∫a-davk∑| 
-
- []
-
-[6
-
-]
-Overfull \hbox (5.67278pt too wide) in paragraph at lines 325--325
-|\T1/ptm/b/sc/17.28 2.3 N·-vrh u∫i-va-tel-skÈho roz-hranÌ (UI) a zku-≤e-nosti
- []
-
-
-Overfull \hbox (9.61374pt too wide) in paragraph at lines 341--341
-|\T1/ptm/b/sc/17.28 2.4 N·-vrh da-ta-b·-zo-vÈho schÈ-matu a bez-pe£-nost-nÌch
- []
-
-[7] [8]
-Kapitola 3.
-[9
-
-]
-Overfull \hbox (6.24371pt too wide) in paragraph at lines 368--368
-|\T1/ptm/b/sc/17.28 3.4 V˝-voj her-nÌch me-cha-nik a do-ved-nostnÌ mini-hry| 
- []
-
-[10]
-Kapitola 4.
-
-Underfull \vbox (badness 1342) has occurred while \output is active []
+Underfull \vbox (badness 2556) has occurred while \output is active []
 
  [11
 
 ]
-[12]
-Kapitola 5.
-[13
-
-]
-Overfull \hbox (12.67168pt too wide) in paragraph at lines 443--443
-|\T1/ptm/b/sc/17.28 5.4 Zhod-no-cenÌ v˝-sledk∑ a mo∫-nosti bu-dou-cÌho roz-
+Underfull \hbox (badness 1540) in paragraph at lines 323--325
+\T1/ptm/m/n/12 ar-chi-tek-turu \T1/ptm/m/it/12 Clean Ar-chi-tecture\T1/ptm/m/n/
+12 . Tato me-to-dika striktn• od-d•-luje ob-chodnÌ lo-giku
  []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \hbox (badness 1466) in paragraph at lines 331--332
+\T1/ptm/m/n/12 pro volbu tÈto plat-formy byla rov-n•∫ m· p∞ed-chozÌ prak-tick· 
+zku-≤e-nost s tÌmto
+ []
 
- [14]
-[15] [16
+[12]
+Underfull \hbox (badness 1072) in paragraph at lines 333--334
+\T1/ptm/m/n/12 Ka∫d˝ po-∫a-da-vek je ov•-∞o-v·n na stran• ser-veru, co∫ za-ji≤-
+¥uje, ∫e u∫i-va-tel m∑∫e
+ []
 
-] [17
 
-] [18
+Underfull \hbox (badness 1331) in paragraph at lines 333--334
+\T1/ptm/m/n/12 p∞i-stu-po-vat pouze ke sv˝m vlast-nÌm lo-g∑m nebo ve-∞ej-n˝m ke
+≤k·m. Pro v˝-po-£et
+ []
+
+[13] [14
+
+]
+Kapitola 2.
+
+Underfull \hbox (badness 1383) in paragraph at lines 339--340
+\T1/ptm/m/n/12 V tÈto ka-pi-tole je po-ps·n pro-ces ana-l˝zy trhu, sta-no-venÌ 
+kon-krÈt-nÌch po-∫a-davk∑
+ []
+
+
+Underfull \hbox (badness 1122) in paragraph at lines 342--343
+\T1/ptm/m/n/12 Trhu do-mi-nuje ofi-ci-·lnÌ apli-kace \T1/ptm/m/it/12 Ge-o-ca-ch
+ing\TS1/ptm/m/it/12 Æ\T1/ptm/m/n/12 , kter· v≤ak pro ne-pla-tÌcÌ u∫i-va-tele
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 347--347
+|\T1/ptm/b/sc/17.28 2.2 Spe-ci-fi-kace funk£-nÌch a ne-funk£-nÌch
+ []
+
+[15
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 367--367
+|\T1/ptm/b/sc/17.28 2.3 N·-vrh u∫i-va-tel-skÈho roz-hranÌ (UI) a
+ []
+
+<img/ui_map.png, id=292, 1212.53pt x 2620.79124pt>
+File: img/ui_map.png Graphic file (type png)
+<use img/ui_map.png>
+Package pdftex.def Info: img/ui_map.png  used on input line 372.
+(pdftex.def)             Requested size: 170.71393pt x 368.98776pt.
+[16 <./img/ui_map.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 378--378
+|\T1/ptm/b/sc/17.28 2.4 N·-vrh da-ta-b·-zo-vÈho schÈ-matu a
+ []
+
+[17] [18
+
+]
+Kapitola 3.
+
+Underfull \hbox (badness 10000) in paragraph at lines 389--389
+|\T1/ptm/b/sc/17.28 3.1 Ini-ci-a-li-zace pro-jektu a kon-fi-gu-race
+ []
+
+
+Underfull \hbox (badness 6978) in paragraph at lines 398--399
+\T1/ptm/m/n/12 KlÌ£ovou sou-£·stÌ re-a-li-zace bylo vy-tvo-∞enÌ wi-dgetu \T1/pt
+m/m/it/12 Au-th-Gu-ard\T1/ptm/m/n/12 . Ten vy-u-∫Ìv·
+ []
+
+<img/login_ui.jpg, id=307, 1224.575pt x 2648.89626pt>
+File: img/login_ui.jpg Graphic file (type jpg)
+<use img/login_ui.jpg>
+Package pdftex.def Info: img/login_ui.jpg  used on input line 402.
+(pdftex.def)             Requested size: 170.71393pt x 369.26662pt.
+[19
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 407--407
+|\T1/ptm/b/sc/17.28 3.3 In-te-grace ma-po-vÈho en-gine a pr·ce s
+ []
+
+[20 <./img/login_ui.jpg>]
+Underfull \hbox (badness 3612) in paragraph at lines 418--419
+\T1/ptm/m/n/12 spl-n•nÌ pod-mÌ-nek (na-sbÌ-r·nÌ po-∫a-do-va-nÈho po-£tu frag-me
+nt∑) je pro-st∞ed-nic-tvÌm
+ []
+
+<img/game_ui.jpg, id=318, 918.43124pt x 1980.64969pt>
+File: img/game_ui.jpg Graphic file (type jpg)
+<use img/game_ui.jpg>
+Package pdftex.def Info: img/game_ui.jpg  used on input line 423.
+(pdftex.def)             Requested size: 170.71393pt x 368.13713pt.
+
+Underfull \vbox (badness 1210) has occurred while \output is active []
+
+ [21]
+[22 <./img/game_ui.jpg>] [23] [24
+
+]
+Kapitola 4.
+
+Underfull \hbox (badness 10000) in paragraph at lines 445--445
+|\T1/ptm/b/sc/17.28 4.1 Op-ti-ma-li-zace vy-kres-lo-v·nÌ vel-kÈho
+ []
+
+
+Underfull \hbox (badness 3884) in paragraph at lines 448--449
+[]\T1/ptm/m/n/12 êe≤enÌm bylo na-sa-zenÌ ba-lÌ£ku \T1/ptm/m/it/12 flut-ter_map_
+marker_cluster\T1/ptm/m/n/12 . Tato tech-no-lo-gie
+ []
+
+[25
+
+]
+Underfull \hbox (badness 3803) in paragraph at lines 454--455
+\T1/ptm/m/n/12 sys-tÈm do-£as-n˝ch log∑. Po-kud hr·£ ode-mkne ke≤ku of-fline, z
+·-znam se ulo∫Ì
+ []
+
+
+Underfull \hbox (badness 1616) in paragraph at lines 454--455
+\T1/ptm/m/n/12 do lo-k·lnÌ ta-bulky \T1/ptm/m/it/12 of-fline_logs\T1/ptm/m/n/12
+ . Apli-kace na po-zadÌ sle-duje ob-no-venÌ ko-nek-ti-vity
+ []
+
+
+Underfull \hbox (badness 1077) in paragraph at lines 463--464
+\T1/ptm/m/n/12 P∞i prv-nÌch tes-tech re-se-to-v·nÌ do-ch·-zelo k chy-b·m kv∑li 
+chy-b•-jÌ-cÌm opr·v-n•-nÌm.
+ []
+
+
+Underfull \hbox (badness 1466) in paragraph at lines 463--464
+\T1/ptm/m/n/12 Pro-blÈm byl vy-∞e-≤en vy-tvo-∞e-nÌm RLS po-licy, kter· po-vo-lu
+je ma-z·nÌ log∑ pouze
+ []
+
+(C:\Users\tonda\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
+File: lstlang1.sty 2025/11/14 1.11b listings language file
+)
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
+nput line 465.
+
+Overfull \hbox (0.98495pt too wide) in paragraph at lines 466--467
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][][][][][][][][][][]  
+ []
+
+[26]
+Underfull \hbox (badness 1571) in paragraph at lines 472--473
+\T1/ptm/m/n/12 Pro mo-ti-vaci u∫i-va-tel∑ byla im-ple-men-to-v·na ob-ra-zovka ∫
+eb-∞Ì£ku, kter· zob-ra-zuje
+ []
+
+<img/leaderboard_ui.png, id=351, 1220.56pt x 2634.84375pt>
+File: img/leaderboard_ui.png Graphic file (type png)
+<use img/leaderboard_ui.png>
+Package pdftex.def Info: img/leaderboard_ui.png  used on input line 476.
+(pdftex.def)             Requested size: 170.71393pt x 368.51378pt.
+[27 <./img/leaderboard_ui.png>] [28
+
+]
+Kapitola 5.
+
+Underfull \hbox (badness 1077) in paragraph at lines 486--487
+\T1/ptm/m/n/12 Z·v•re£n· f·ze pro-jektu se sou-st∞e-dila na ov•-∞enÌ funk£-nost
+i apli-kace v re-·l-n˝ch
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 493--493
+|\T1/ptm/b/sc/17.28 5.2 Pro-ces se-sta-venÌ apli-kace (De-bug vs.
+ []
+
+
+Underfull \hbox (badness 1270) in paragraph at lines 494--495
+\T1/ptm/m/n/12 B•hem v˝-voje byly vy-u-∫Ì-v·ny dv• od-li≤nÈ verze apli-kace. Ve
+rze \T1/ptm/m/it/12 De-bug \T1/ptm/m/n/12 slou-∫ila
+ []
+
+
+Underfull \hbox (badness 1571) in paragraph at lines 496--497
+\T1/ptm/m/n/12 a od-stra-¨uje ne-po-u-∫itÈ £·sti kniho-ven. TÌm do-≤lo k v˝-raz
+-nÈmu snÌ-∫enÌ ve-li-kosti
+ []
+
+[29
+
+]
+Underfull \hbox (badness 1024) in paragraph at lines 498--498
+|\T1/ptm/b/sc/17.28 5.3 êe-≤enÌ pro-blÈm∑ s po-de-pi-so-va-cÌmi klÌ£i a
+ []
+
+
+Underfull \hbox (badness 1048) in paragraph at lines 499--500
+\T1/ptm/m/n/12 Nejv•t≤Ì tech-nic-kou v˝-zvou p∞i na-sa-zenÌ byla kon-fi-gu-race
+ slu∫by \T1/ptm/m/it/12 Go-o-gle Sign-In\T1/ptm/m/n/12 .
+ []
+
+
+Underfull \hbox (badness 1946) in paragraph at lines 510--511
+\T1/ptm/m/n/12 Projekt Ge-o-Hunt ˙sp•≤n• spl-nil v≤echny sta-no-venÈ cÌle. Byla
+ vy-tvo-∞ena sta-bilnÌ
+ []
+
+
+Underfull \hbox (badness 5726) in paragraph at lines 510--511
+\T1/ptm/m/n/12 ge-o-lo-ka£nÌ plat-forma s p∞Ì-jem-n˝m u∫i-va-tel-sk˝m roz-hra-n
+Ìm a ino-va-tivnÌ hernÌ
+ []
+
+[30]
+Underfull \hbox (badness 1221) in paragraph at lines 526--527
+[]\T1/ptm/m/n/12 V pr∑-b•hu re-a-li-zace byla vy-tvo-∞ena ro-bustnÌ mo-bilnÌ ap
+li-kace ve fra-meworku
+ []
+
+[31
+
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 539--540
+[]\T1/ptm/m/n/12 POSTGRESQL GLO-BAL DE-VE-LO-P-MENT GROUP. \T1/ptm/m/it/12 Post
+-gre-SQL 16
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 539--540
+\T1/ptm/m/it/12 Do-cu-men-tation \T1/ptm/m/n/12 [on-line]. 2025 [cit. 2026-01-0
+5]. Do-stupnÈ z: []$\T1/cmtt/m/n/12 https :
+ []
+
+
+Underfull \hbox (badness 1354) in paragraph at lines 542--543
+[]\T1/ptm/m/n/12 MARTIN, Ro-bert C. \T1/ptm/m/it/12 Clean Ar-chi-tecture: A Cra
+ft-sman's Gu-ide to Soft-ware
+ []
+
+
+Underfull \hbox (badness 4595) in paragraph at lines 542--543
+\T1/ptm/m/it/12 Structure and De-sign\T1/ptm/m/n/12 . First edi-tion. Bos-ton: 
+Pren-tice Hall, 2017. ISBN
+ []
+
+[32
+
+] [33
 
 ] (document.aux)
  ***********
@@ -856,26 +1074,27 @@ LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-24>
  ***********
 Package rerunfilecheck Info: File `document.out' has not changed.
-(rerunfilecheck)             Checksum: 109C837DB097F359C5AAE790AE28BC05;8624.
+(rerunfilecheck)             Checksum: 171A458B0390C3284344BACCDF53867D;10516.
  ) 
 Here is how much of TeX's memory you used:
- 16924 strings out of 467870
- 272144 string characters out of 5418356
- 869093 words of memory out of 5000000
- 45420 multiletter control sequences out of 15000+600000
- 697463 words of font info for 103 fonts, out of 8000000 for 9000
+ 17547 strings out of 467870
+ 279714 string characters out of 5418356
+ 909003 words of memory out of 5000000
+ 46009 multiletter control sequences out of 15000+600000
+ 692207 words of font info for 100 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,11n,79p,752b,619s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,12n,79p,861b,1453s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\tonda\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt
-1200.pk><C:/Users/tonda/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvetic/
-uhvb8a.pfb><C:/Users/tonda/AppData/Local/Programs/MiKTeX/fonts/type1/urw/helvet
-ic/uhvr8a.pfb><C:/Users/tonda/AppData/Local/Programs/MiKTeX/fonts/type1/urw/tim
-es/utmb8a.pfb><C:/Users/tonda/AppData/Local/Programs/MiKTeX/fonts/type1/urw/tim
-es/utmr8a.pfb><C:/Users/tonda/AppData/Local/Programs/MiKTeX/fonts/type1/urw/tim
-es/utmri8a.pfb>
-Output written on document.pdf (23 pages, 433976 bytes).
+1095.pk> <C:\Users\tonda\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi60
+0\ectt1200.pk><C:/Users/tonda/AppData/Local/Programs/MiKTeX/fonts/type1/urw/hel
+vetic/uhvb8a.pfb><C:/Users/tonda/AppData/Local/Programs/MiKTeX/fonts/type1/urw/
+helvetic/uhvr8a.pfb><C:/Users/tonda/AppData/Local/Programs/MiKTeX/fonts/type1/u
+rw/times/utmb8a.pfb><C:/Users/tonda/AppData/Local/Programs/MiKTeX/fonts/type1/u
+rw/times/utmr8a.pfb><C:/Users/tonda/AppData/Local/Programs/MiKTeX/fonts/type1/u
+rw/times/utmri8a.pfb>
+Output written on document.pdf (33 pages, 2944103 bytes).
 PDF statistics:
- 380 PDF objects out of 1000 (max. 8388607)
- 74 named destinations out of 1000 (max. 500000)
- 303 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 526 PDF objects out of 1000 (max. 8388607)
+ 100 named destinations out of 1000 (max. 500000)
+ 387 words of extra memory for PDF output out of 10000 (max. 10000000)
 

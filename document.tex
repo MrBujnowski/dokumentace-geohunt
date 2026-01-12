@@ -3,14 +3,49 @@
 % Autor: Antonín Bujnovský
 %
 \documentclass[12pt, a4paper,
-twoside,
-openany
+twoside, % Zapnutí oboustranného sázení pro zrcadlové okraje
+openright % Kapitoly začínají vždy na pravé straně (liché)
 ]{report}
+
+% Definice příkazu pro vynucení startu na pravé (liché) straně
+% a vložení úplně čisté prázdné stránky na rubu.
+\newcommand{\forceoddpage}{%
+	\clearpage % Ukončí aktuální stránku a vykreslí nezpracované obrázky
+	\ifodd\value{page}
+	% Pokud jsme na liché straně, nic neděláme (další text začne vlevo),
+	% ale ty jsi chtěl prázdnou stránku "mezi", tak se tato podmínka 
+	% obvykle doplňuje o \else větev níže.
+	\else
+	% Pokud je aktuální číslo stránky sudé, vložíme prázdnou lícovou stranu
+	\thispagestyle{empty} % Stránka bude bez čísel a čar
+	\hbox{}               % Vložíme neviditelný znak, aby LaTeX stránku nevyhodil
+	\newpage              % Přejdeme na další stranu
+	\fi
+}
+
+% --- BALÍČKY PRO OBRÁZKY (Nahráno na začátku pro stabilitu) ---
+\usepackage{graphicx}
+\usepackage{letltxmacro}
+\usepackage[T1]{fontenc}
+
+% --- Ošetření obrázků pro bezchybnou kompilaci v preview ---
+% Použití \detokenize opravuje chybu "Missing $ inserted" u podtržítek v názvech
+\LetLtxMacro\oldincludegraphics\includegraphics
+\renewcommand{\includegraphics}[2][]{\IfFileExists{#2}{\oldincludegraphics[#1]{#2}}{\framebox[\if\relax\detokenize{#1}\relax 0.5\linewidth\else \expandafter\getwidth#1 \fi]{\rule{0pt}{3cm} Soubor \detokenize{#2} nenalezen}}}
+\def\getwidth width=#1 #2{#1}
+
+% --- ZÁKAZ DĚLENÍ SLOV A TYPOGRAFICKÁ STABILITA ---
+\hyphenpenalty=10000
+\exhyphenpenalty=10000
+\widowpenalty=10000
+\clubpenalty=10000
+\interlinepenalty=5000
+\tolerance=2000 
+\emergencystretch=15pt
+\sloppy 
 
 % --- odstraneni zbytkoveho textu "superiorSup" a pod. ---
 \AtBeginDocument{%
-	\immediate\write16{(cleaning stray figureversions output...)}%
-	\thispagestyle{empty}
 	\let\superiorSup\relax
 	\let\textOsF\relax
 	\let\textTOsF\relax
@@ -38,30 +73,31 @@ openany
 \author{\jmenoAutora}
 \date{\datumOdevzdani}
 
-\usepackage[top=2.5cm, bottom=2.5cm, left=2.5cm, right=2.5cm]{geometry}
+% --- NASTAVENÍ ZRCADLOVÝCH OKRAJŮ (inner=3.5cm pro vazbu) ---
+\usepackage[top=2.5cm, bottom=2.5cm, inner=3.5cm, outer=2.5cm]{geometry}
 
 \usepackage[czech]{babel}
 \usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
 \usepackage{cmap}
 
-\usepackage{graphicx}
 \usepackage{subcaption}
 \usepackage{float}
 \usepackage{placeins}
 \usepackage{hyperref}
+\usepackage{needspace}
 
 \linespread{1.25}
 \setlength{\parskip}{0.5em}
 
 \usepackage[pagestyles]{titlesec}
-\titleformat{\chapter}[block]{\scshape\bfseries\LARGE}{\thechapter}{10pt}{\vspace{0pt}}[\vspace{-22pt}]
-\titleformat{\section}[block]{\scshape\bfseries\Large}{\thesection}{10pt}{\vspace{0pt}}
-\titleformat{\subsection}[block]{\bfseries\large}{\thesubsection}{10pt}{\vspace{0pt}}
+% Needspace zajistí, že nadpis neuteče na novou stránku bez textu
+\titleformat{\chapter}[block]{\needspace{6\baselineskip}\scshape\bfseries\LARGE}{\thechapter}{10pt}{\vspace{0pt}}[\vspace{-22pt}]
+\titleformat{\section}[block]{\needspace{4\baselineskip}\scshape\bfseries\Large}{\thesection}{10pt}{\vspace{0pt}}
+\titleformat{\subsection}[block]{\needspace{3\baselineskip}\bfseries\large}{\thesubsection}{10pt}{\vspace{0pt}}
 
 \usepackage{tocloft}
-\setlength{\cftbeforechapskip}{0.25em}
-\setlength{\cftbeforesecskip}{0.12em}
+\setlength{\cftbeforechapskip}{0.20em}
+\setlength{\cftbeforesecskip}{0.10em}
 \setlength{\cftsubsecindent}{1.5em}
 \setlength{\cftsubsubsecindent}{3em}
 \setlength{\cftchapnumwidth}{2em}
@@ -84,7 +120,6 @@ openany
 \renewcommand{\headrulewidth}{0.025pt}
 \fancyhf{}
 \fancyfoot[C]{\thepage}
-\renewcommand{\headrulewidth}{0.025pt}
 
 \usepackage{booktabs}
 \usepackage{url}
@@ -132,41 +167,44 @@ openany
 
 \setlength{\headheight}{15pt}
 
-% Odstranění prázdných stránek po kapitolách
-\let\cleardoublepage\clearpage
-\makeatletter
-\renewcommand{\@openrightfalse}{\let\cleardoublepage\clearpage}
-\makeatother
+% Úprava pro prázdné stránky při oboustranném tisku
+\let\oldcleardoublepage\cleardoublepage
+\renewcommand{\cleardoublepage}{%
+	\clearpage\if@twoside \ifodd\c@page\else
+	\hbox{}
+	\thispagestyle{empty}
+	\newpage
+	\if@twocolumn\hbox{}\newpage\fi\fi\fi}
 
 \begin{document}
 	
 	\pagestyle{empty}
-	\pagenumbering{Roman}
+	\pagenumbering{arabic}
 	
 	%% Titulní stránka
 	\thispagestyle{empty}
 	{\fontfamily{phv}\selectfont
-		\vspace*{-1cm}
+		\vspace*{-1.2cm}
 		%% Logo školy
 		\begin{figure}[H]
 			\centering
-			\includegraphics[width=0.5\linewidth]{img/logo-skoly.png} 
+			\includegraphics[width=0.45\linewidth]{img/logo-skoly.png}
 		\end{figure}
 		
 		{\bfseries
 			\begin{center}
-				\vspace{0.5cm}
+				\vspace{0.3cm}
 				\LARGE{ZÁVĚREČNÁ STUDIJNÍ PRÁCE}\\
 				\large{dokumentace}\\
 				\vspace{0.8cm}
 				\LARGE {\nazevPrace}\\
-			\end{center}  
+			\end{center}   
 		}
 		
-		\vspace{0.5cm}
+		\vspace{0.4cm}
 		\begin{figure}[H]
 			\centering
-			\includegraphics[width=0.7\linewidth]{img/logo.png} 
+			\includegraphics[width=1.0\linewidth]{img/logo.jpg} 
 		\end{figure}
 		
 		\vspace{0.8cm}
@@ -181,31 +219,34 @@ openany
 		\end{center}
 		\vfill
 	}
-	
-	\newpage
+	\forceoddpage
 	
 	%% Poděkování a prohlášení
 	\noindent{\large{\bfseries{Poděkování}\\}}
-	\noindent  Rád bych touto cestou vyjádřil upřímné poděkování pánům učitelům Ing.~Petru Grussmannovi a~Mgr.~Marku Lučnému za~jejich ochotu, odborné připomínky a~čas, který mi věnovali při konzultacích během vývoje aplikace GeoHunt.
+	\noindent Rád bych touto cestou vyjádřil upřímné poděkování pánům učitelům Ing.~Petru Grussmannovi a~Mgr.~Marku Lučnému za~jejich ochotu, odborné připomínky a~čas, který mi věnovali při konzultacích během vývoje aplikace GeoHunt.
 	
-	\vspace*{0.7\textheight}
+	\vspace*{0.5\textheight}
 	
 	\noindent{\large{\bfseries{Prohlášení}\\}}
-	\noindent{Prohlašuji, že~jsem závěrečnou práci vypracoval samostatně a~uvedl veškeré použité 
-		informační zdroje.\\}
+	\noindent{Prohlašuji, že~jsem závěrečnou práci vypracoval samostatně a~uvedl veškeré použité informační zdroje. \par}
+	\vspace{0.3cm}
 	\noindent{Souhlasím, aby tato studijní práce byla použita k~výukovým a~prezentačním účelům na~Střední průmyslové a~umělecké škole v~Opavě, Praskova~399/8.}
+	
 	\vfill
-	\noindent{V~Opavě~\datumOdevzdani\\}
-	\noindent
-	\begin{minipage}{\linewidth}
-		\hspace{9.5cm} 
-		\begin{tabular}{@{}p{6cm}@{}}
+	
+	\noindent V~Opavě~dne~\datumOdevzdani \par
+	
+	\vspace{0.5cm}
+	
+	\begin{flushright}
+		\begin{minipage}{6cm}
+			\centering
 			\dotfill \\
 			Podpis autora
-		\end{tabular}
-	\end{minipage}
+		\end{minipage}
+	\end{flushright}
 	
-	\newpage
+\forceoddpage
 	
 	%% Abstrakt
 	\noindent{\Large{\bfseries{Abstrakt}\\}}
@@ -228,10 +269,11 @@ openany
 	
 	\noindent Flutter, Geocaching, Supabase, Dart, Geolocation, Mobile application, PostgreSQL, Gamification, Offline synchronization.
 	
-	\clearpage
+\forceoddpage
 	
 	%% Obsah
 	\pagestyle{fancy}
+	\enlargethispage{3cm} 
 	\vspace*{-1.5cm}
 	\begingroup
 	\renewcommand{\baselinestretch}{1.0}\normalsize
@@ -243,11 +285,13 @@ openany
 	\renewcommand{\cftsecpagefont}{\normalsize}
 	\renewcommand{\cftsubsecpagefont}{\normalsize}
 	\renewcommand{\cftsubsubsecpagefont}{\normalsize}
-	\endgroup
 	\tableofcontents
+	\endgroup
+	
+\forceoddpage
 	
 	\pagenumbering{arabic}
-	\setcounter{page}{1}
+	\setcounter{page}{9}
 	\pagestyle{fancy}
 	
 	%% Úvod
@@ -260,14 +304,14 @@ openany
 	
 	Cílem této práce je dokumentace kompletního cyklu vývoje softwarového produktu GeoHunt – od~teoretického vymezení použitých technologií přes analýzu uživatelských potřeb až po praktickou implementaci klíčových funkcí, jako je geolokace, offline synchronizace a~gamifikace. Práce si klade za~cíl demonstrovat, že~pomocí moderních frameworků lze vytvořit robustní a~uživatelsky přívětivou platformu, která motivuje studenty i~širší veřejnost k~aktivnímu pohybu a~objevování okolního světa.
 	
+	\forceoddpage
 	\chapter{Teoretická a metodická východiska}
 	
 	\section{O projektu}
-	
 	Výsledkem tohoto maturitního projektu je komplexní mobilní aplikace GeoHunt, která modernizuje tradiční koncept geocachingu. Cílem práce bylo navrhnout a~realizovat systém, který propojuje fyzickou aktivitu v~přírodě s~digitálními herními prvky. GeoHunt umožňuje uživatelům vyhledávat virtuální objekty (kešky) na~základě GPS souřadnic v~reálném čase.
 	
-	Klíčovým prvkem, kterým se projekt odlišuje od~stávajících řešení, je zavedení mini-her. Po~dosažení fyzické lokace kešky se uživateli neotevře obsah automaticky, ale musí nejprve úspěšně absolvovat jednu náhodně vybranou mini-hru . Tento přístup zvyšuje interaktivitu aplikace a~motivuje hráče k~lepším výkonům. Součástí projektu je také  systém žebříčků a~úplná podpora offline režimu, která je nezbytná pro~použití v~místech s~omezeným mobilním signálem.
-
+	Klíčovým prvkem, kterým se projekt odlišuje od~stávajících řešení, je zavedení interaktivních mini-her. Po~dosažení fyzické lokace kešky se uživateli neotevře obsah automaticky, ale musí nejprve úspěšně absolvovat jednu náhodně vybranou mini-hru ze~dvou dostupných variant. Aplikace nabízí AR Coin Hunt využívající kameru a~gyro senzory pro~360° pohled a~Falling Fragments, kde hráč ovládá koš pro~zachytávání padajících objektů. Tento přístup zvyšuje interaktivitu aplikace a~motivuje hráče k~lepším výkonům. Součástí projektu je také systém hodnocení kešek, žebříček nejlepších hráčů a~úplná podpora offline režimu, která je nezbytná pro~použití v~místech s~omezeným mobilním signálem.
+	
 	
 	\section{Framework Flutter a programovací jazyk Dart}
 	Pro~vývoj klientské části aplikace jsem zvolil framework Flutter od~společnosti Google. Jedná se o~moderní UI toolkit, který umožňuje vytvářet nativně kompilované aplikace pro~mobilní zařízení, web i~desktop z~jediné kódové báze. Hlavním argumentem pro~volbu tohoto nástroje byla jeho schopnost vykreslovat složitá rozhraní (včetně mapových podkladů s~tisíci body) rychlostí až 120~snímků za~sekundu díky grafickému engine Impeller a~taky moje zkušenost s~tímto frameworkem.
@@ -288,8 +332,8 @@ openany
 	
 	Bezpečnost je řešena přímo na~úrovni databáze pomocí \textit{Row Level Security} (RLS). Každý požadavek je ověřován na~straně serveru, což zajišťuje, že~uživatel může přistupovat pouze ke~svým vlastním logům nebo veřejným keškám. Pro~výpočet globálních statistik a~žebříčků v~reálném čase jsou využívány SQL Views, které agregují data bez~nutnosti přetěžování klientské aplikace.
 	
-
 	
+	\forceoddpage
 	\chapter{Analýza a návrh řešení}
 	
 	V~této kapitole je popsán proces analýzy trhu, stanovení konkrétních požadavků na~funkcionalitu aplikace a~návrh datové struktury. Tato fáze byla nezbytná pro~pochopení cílové skupiny uživatelů a~eliminaci potenciálních technických rizik.
@@ -298,8 +342,6 @@ openany
 	Při~návrhu aplikace GeoHunt bylo nutné prozkoumat existující geolokační platformy. Trhu dominuje oficiální aplikace \textit{Geocaching®}, která však pro~neplatící uživatele omezuje řadu funkcí. Dalšími konkurenty jsou české projekty \textit{GEOFUN} nebo \textit{Adventure Lab®}.
 	
 	Hlavním zjištěním analýzy bylo, že~většina aplikací se soustředí buď na~fyzické schránky (tradiční geocaching), nebo na~statické textové úkoly. GeoHunt tuto mezeru vyplňuje zavedením virtuálních kešek na~reálných souřadnicích, jejichž odemčení je podmíněno úspěšným splněním dovednostní mini-hry. Tímto způsobem se aplikace stává dynamičtější a~atraktivnější pro~mladší generaci hráčů.
-	
-	
 	
 	
 	\section{Specifikace funkčních a nefunkčních požadavků}
@@ -327,29 +369,25 @@ openany
 	
 	\begin{figure}[H]
 		\centering
-		\framebox{\parbox{0.8\textwidth}{\centering
-				\vspace{3cm}
-				\textbf{[SCREENSHOT MAPY NEBO WIREFRAME]} \\
-				\small\textit{Obrázek č. 2: Návrh hlavního mapového rozhraní aplikace.}
-				\vspace{3cm}
-		}}
+		\includegraphics[width=0.4\textwidth]{img/ui_map.png}
 		\caption{Vizuální návrh mapové části.}
 		\label{fig:ui_map}
 	\end{figure}
 	
-
+	
 	\section{Návrh databázového schématu a bezpečnostních pravidel}
 	Jádrem systému je relační model v~PostgreSQL. Schéma se skládá ze~tří hlavních entit: \textit{profiles} (data o~uživatelích), \textit{geocaches} (souřadnice a~popisy bodů) a~\textit{logs} (záznamy o~nálezech). Vztahy mezi tabulkami jsou řešeny pomocí cizích klíčů, což zajišťuje referenční integritu.
 	
 	\subsection{Row Level Security (RLS)}
 	Bezpečnostní politika byla nastavena tak, aby zápis do~tabulky \textit{logs} mohl provést pouze autentizovaný uživatel pro~své vlastní ID. Veřejné kešky jsou přístupné pro~čtení všem, ale jejich editace je omezena pouze na~uživatele s~rolí \textit{admin}. Tato vrstva ochrany přímo v~databázi nahrazuje složitou logiku na~straně serveru.
-
+	
+	\forceoddpage
 	
 	\chapter{Realizace mobilní aplikace}
 	V~této kapitole je popsán technický postup vývoje aplikace GeoHunt. Pozornost je věnována konfiguraci vývojového prostředí, implementaci klíčových modulů a~propojení klientské části s~cloudovým backendem.
 	
 	\section{Inicializace projektu a konfigurace prostředí}
-	Vývoj byl zahájen vytvořením nového projektu ve~frameworku Flutter. Pro~zajištění bezpečnosti citlivých údajů, jako jsou API klíče k~Supabase nebo Google Maps (které nakonec nebyli použity), byl do~projektu integrován balíček \textit{flutter\_dotenv}. Tyto údaje jsou uloženy v~souboru \textit{.env}, který není součástí veřejného repozitáře, čímž je zamezeno jejich zneužití.
+	Vývoj byl zahájen vytvořením nového projektu ve~frameworku Flutter. Pro~zajištění bezpečnosti citlivých údajů, jako jsou API klíče k~Supabase nebo Google Maps (které nakonec nebyly použity), byl do~projektu integrován balíček \textit{flutter\_dotenv}. Tyto údaje jsou uloženy v~souboru \textit{.env}, který není součástí veřejného repozitáře, čímž je zamezeno jejich zneužití.
 	
 	Struktura projektu byla od~počátku organizována podle pravidel \textit{Clean Architecture}. Složka \textit{lib/} byla rozdělena na~podadresáře \textit{core} (sdílené prvky) a~\textit{features}, kde každá funkce aplikace (např. mapa, autentizace, žebříčky) má svou vlastní logiku oddělenou od~ostatních.
 	
@@ -359,30 +397,46 @@ openany
 	\subsection{Logika AuthGuard a správa relací}
 	Klíčovou součástí realizace bylo vytvoření widgetu \textit{AuthGuard}. Ten využívá \textit{StreamBuilder} k~poslechu stavu autentizace v~reálném čase. Pokud uživatel není přihlášen, aplikace automaticky zobrazí přihlašovací obrazovku. Po~úspěšném ověření identity je uživatel přesměrován na~hlavní mapové rozhraní. Tato logika zajišťuje, že~nepovolané osoby nemají přístup k~hernímu obsahu.
 	
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.4\textwidth]{img/login_ui.jpg}
+		\caption{Vizuální návrh přihlašování.}
+		\label{fig:login_ui}
+	\end{figure}
 	
 	\section{Integrace mapového engine a práce s geografickými daty}
 	Vzhledem k~požadavku na~využití otevřených standardů byl zvolen balíček \textit{flutter\_map} ve~spojení s~OpenStreetMap. Na~rozdíl od~Google Maps SDK toto řešení umožňuje plnou kontrolu nad~vizuálním stylem mapy bez~nutnosti platit licenční poplatky při vysokém počtu zobrazení.
 	
 	Pro~určování polohy uživatele v~reálném čase je využívána knihovna \textit{geolocator}, která přistupuje k~GPS modulu zařízení s~vysokou přesností. Souřadnice jsou v~aplikaci reprezentovány objekty typu \textit{LatLng}, se kterými pracují všechny výpočetní moduly.
 	
-	\section{Vývoj herních mechanik a dovednostní mini-hry}
-	Herní smyčka začíná v~modulu pro~detekci vzdálenosti. Aplikace periodicky vypočítává vzdálenost mezi aktuální polohou hráče a~nejbližší keškou pomocí algoritmu \textit{Haversine}. Pokud vzdálenost klesne pod~hranici 20 metrů, aktivuje se tlačítko pro~odemčení.
+\section{Vývoj herních
+	mechanik a dovednostních mini-her}
+Herní smyčka začíná v~modulu pro~detekci vzdálenosti. Aplikace periodicky vypočítává vzdálenost mezi aktuální polohou hráče a~nejbližší keškou pomocí algoritmu \textit{Haversine}. Pokud vzdálenost klesne pod~hranici 20 metrů, aktivuje se tlačítko pro~odemčení.
+\subsection{Implementace mini-hry AR Coin Hunt}
+První dovednostní výzva byla navržena jako interaktivní AR (augmented reality) prvek vyžadující prostorovou orientaci. Hráč drží zařízení jako okno do~virtuálního prostředí a~otáčí se kolem své osy, přičemž kamera společně s~gyroskopeM umožňuje pohled do~360° panoramatu. V~časovém limitu musí hráč najít a~klepnutím na~displej sesbírat náhodně rozmístěné virtuální mince v~okolním prostoru. Po~úspěšném dokončení hry je odeslán požadavek na~Supabase pro~zápis nálezu do~tabulky \textit{logs}.
+\subsection{Implementace mini-hry Falling Fragments}
+Druhá dovednostní výzva implementuje mechaniku založenou na~senzorech gyroskopu. Hráč ovládá sběrný koš umístěný na~spodní části displeje náklonem telefonu, přičemž herní logika využívá data ze~\texttt{sensors\_plus} balíčku pro~snímání pohybu v~reálném čase s~citlivostí 0.02 radiánů. Cílem je zachytit padající objekty (fragmenty) generované v~náhodných intervalech před~jejich dopadem na~dolní hranici displeje. Po~úspěšném splnění podmínek (nasbírání požadovaného počtu fragmentů) je prostřednictvím asynchronního API volání zaznamenán nález do~tabulky \textit{logs} v~Supabase databázi. Kamera zobrazuje živý stream reálného prostředí s~překrytými herními prvky, což vytváří AR zážitek.
+\subsection{Náhodný výběr mini-hry}
+Při každém pokusu o~odemčení kešky systém náhodně vybírá mezi těmito dvěma mini-hrami. Tato variabilita zajišťuje, že~hra zůstává zábavná i~při opakovaném hraní a~testuje různé dovednosti hráče.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.4\textwidth]{img/game_ui.jpg}
+	\caption{Ukázka herní mechaniky pro odemykání kešky.}
+	\label{fig:game_ui}
+\end{figure}
+
+\section{Systém hodnocení a recenzí kešek}
+Pro~zvýšení interaktivity komunity byl implementován systém hodnocení, který umožňuje hráčům sdílet své zkušenosti s~jednotlivými keš kami. Po~úspěšném odemčení může uživatel ohodnotit kešku hvězdičkami (1–5) a~přidat textový komentář.
+
+\subsection{Implementace databázové struktury}
+V~Supabase byla vytvořena tabulka \textit{cache\_reviews} s~relací na~tabulky \textit{geocaches} a~\textit{profiles}. Pro~zobrazení recenzí je využíván SQL JOIN, který spojuje hodnocení s~uživatelskými profily a~načítá jméno autora. Aplikace zobrazuje průměrné hodnocení přímo v~detailu kešky pomocí vizualizace hvězdiček a~seznam nejnovějších komentářů.
+
+\subsection{Row Level Security pro reviews}
+Bezpečnostní pravidla byla nakonfigurována tak, aby každý autentizovaný uživatel mohl číst všechny recenze, ale vkládat pouze své vlastní hodnocení. Tím je zabráněno spamu a~manipulaci s~daty.
 	
-	\subsection{Implementace mini-hry Tap-Game}
-	Dovednostní výzva byla navržena jako interaktivní prvek vyžadující postřeh. Hráč musí v~časovém limitu naplnit ukazatel postupu rychlým klepáním na~displej, přičemž obtížnost (rychlost ubývání postupu) je definována atributem v~databázi. Po~úspěšném dokončení hry je odeslán požadavek na~Supabase pro~zápis nálezu do~tabulky \textit{logs}.
 	
-	\begin{figure}[H]
-		\centering
-		\framebox{\parbox{0.8\textwidth}{\centering
-				\vspace{3cm}
-				\textbf{[SCREENSHOT MINI-HRY]} \\
-				\small\textit{Obrázek č. 3: Uživatelské rozhraní dovednostní výzvy.}
-				\vspace{3cm}
-		}}
-		\caption{Ukázka herní mechaniky pro odemykání kešky.}
-		\label{fig:game_ui}
-	\end{figure}
 	
+	\forceoddpage
 	
 	\chapter{Specifické technické výzvy a jejich řešení}
 	
@@ -399,22 +453,34 @@ openany
 	\section{Logika synchronizace dat mezi klientem a serverem}
 	Zápis nálezů v~offline režimu představoval výzvu pro~integritu dat. Byl vytvořen systém dočasných logů. Pokud hráč odemkne kešku offline, záznam se uloží do~lokální tabulky \textit{offline\_logs}. Aplikace na~pozadí sleduje obnovení konektivity (\textit{ConnectivityResult.wifi} nebo \textit{mobile}) a~následně spustí proces synchronizace, který odešle všechny nashromážděné záznamy do~cloudu Supabase.
 	
-	\section{Generování žebříčků pomocí SQL Views}
-	Pro~výpočet herních statistik (denní, měsíční a~celkové pořadí) by bylo neefektivní stahovat všechny logy a~třídit je v~mobilním telefonu. Místo toho byla logika přenesena na~stranu databáze PostgreSQL pomocí \textit{SQL Views}. Tyto pohledy automaticky agregují data z~tabulek \textit{profiles} a~\textit{logs}. Flutter aplikace k~těmto datům přistupuje jako k~virtuálním tabulkám, což minimalizuje množství přenášených dat a~výrazně urychluje zobrazení žebříčku.
+	\section{Správa stavu kešek a funkce Reset Cache}
+	Klíčovou funkcí pro~administrátory je možnost resetovat stav kešky. Tato operace byla komplikovaná nutností synchronizace mezi lokální SQLite databází a~cloudovým úložištěm Supabase.
+	
+	\subsection{Implementace reset logiky}
+	Funkce \textit{resetCache} provádí dvě operace: v~lokální databázi je keška označena jako zamčená (\textit{isUnlocked = false}) a~zároveň je odeslán DELETE požadavek na~Supabase pro~smazání záznamu z~tabulky \textit{logs}. Pro~okamžitou zpětnou vazbu byl UI navržen tak, aby aktualizoval stav markeru na~mapě bez~nutnosti restartu aplikace využitím metody \textit{setState} a~\textit{\_rebuildMarkers}.
+	
+	\subsection{Řešení RLS pro DELETE operace}
+	Při prvních testech resetování docházelo k~chybám kvůli chybějícím oprávněním. Problém byl vyřešen vytvořením RLS policy, která povoluje mazání logů pouze samotnému autorovi záznamu:
+	
+	\begin{lstlisting}[language=SQL, caption=RLS policy pro mazání logů]
+		CREATE POLICY "Users can delete their own logs"
+		ON logs FOR DELETE TO authenticated
+		USING (auth.uid() = user_id);
+	\end{lstlisting}
+	
+	\section{Zobrazení žebříčku nejlepších hráčů}
+	Pro~motivaci uživatelů byla implementována obrazovka žebříčku, která zobrazuje statistiky hráčů seřazené podle počtu nalezených kešek. Data jsou načítána dotazem na~tabulku \textit{profiles}, která agreguje počet záznamů z~tabulky \textit{logs} pro~každého uživatele. Aplikace zobrazuje jméno hráče, počet nálezů a~vizuální odznaky (zlatá/stříbrná/bronzová trofej) pro~první tři místa.
 	
 	\begin{figure}[H]
 		\centering
-		\framebox{\parbox{0.8\textwidth}{\centering
-				\vspace{3cm}
-				\textbf{[SCREENSHOT ŽEBŘÍČKU]} \\
-				\small\textit{Obrázek č. 4: Zobrazení herního pořadí čerpajícího z SQL Views.}
-				\vspace{3cm}
-		}}
+		\includegraphics[width=0.4\textwidth]{img/leaderboard_ui.png}
 		\caption{Uživatelské rozhraní žebříčku nejlepších hráčů.}
 		\label{fig:leaderboard_ui}
+		
 	\end{figure}
 	
 	
+	\forceoddpage
 	\chapter{Zhodnocení, testování a nasazení}
 	
 	Závěrečná fáze projektu se soustředila na~ověření funkčnosti aplikace v~reálných podmínkách a~přípravu pro~veřejné publikování. Tato kapitola popisuje proces testování geolokačních funkcí a~technické překážky spojené s~autentizací v~produkčním prostředí.
@@ -445,21 +511,12 @@ openany
 	
 	V~rámci budoucího rozvoje se nabízí několik směrů:
 	\begin{itemize}
-		\item \textbf{Sociální prvky:} Implementace systému přátel a~sdílení nálezů na~sociální sítě.
-		\item \textbf{Rozšířená realita (AR):} Nahrazení 2D mini-hry zobrazením virtuální kešky přímo v~prostředí skrze kameru telefonu.
+		\item \textbf{Uživatelský obsah (UGC):} Rozšíření aplikace o~možnost, aby samotní uživatelé mohli přímo v~terénu navrhovat a~vytvářet své vlastní virtuální kešky, definovat jejich obtížnost a~vkládat k~nim popisy.
+		\item \textbf{Sociální interakce:} Implementace systému přátel, sdílení nálezů na~sociální sítě a~možnost skupinového lovu kešek v~reálném čase.
+		\item \textbf{Pokročilé AR prvky:} Rozšíření sady mini-her o~interakci s~3D modely objektů (např. virtuální truhly), které by se objevovaly na~konkrétních površích v~prostředí.
 	\end{itemize}
 	
-	\begin{figure}[H]
-		\centering
-		\framebox{\parbox{0.8\textwidth}{\centering
-				\vspace{3cm}
-				\textbf{[FOTKA Z TESTOVÁNÍ V TERÉNU]} \\
-				\small\textit{Obrázek č. 5: Aplikace GeoHunt spuštěná na reálném zařízení v terénu.}
-				\vspace{3cm}
-		}}
-		\caption{Testování geolokačních funkcí v praxi.}
-		\label{fig:field_test}
-	\end{figure}
+\forceoddpage
 	
 	\chapter*{Závěr}
 	\addcontentsline{toc}{chapter}{Závěr}
@@ -486,14 +543,15 @@ openany
 		\item PUB.DEV. \textit{Flutter Map Marker Cluster package} [online]. 2025 [cit. 2026-01-05]. Dostupné z: \url{https://pub.dev/packages/flutter_map_marker_cluster}
 	\end{enumerate}
 	
-	\chapter*{Seznam příloh}
-	\addcontentsline{toc}{chapter}{Seznam příloh}
 	
-	\begin{itemize}
-		\item \textbf{Příloha č. 1:} Zdrojový kód aplikace (přiložen na~digitálním nosiči / odkaz na~GitHub).
-		\item \textbf{Příloha č. 2:} Obrázková dokumentace uživatelského rozhraní (screenshoty z~aplikace).
-		\item \textbf{Příloha č. 3:} SQL skript pro~inicializaci databázového schématu v~Supabase.
-		\item \textbf{Příloha č. 4:} Uživatelský manuál pro~instalaci a~první spuštění aplikace.
-	\end{itemize}
+	\chapter*{Seznam obrázků}
+	\addcontentsline{toc}{chapter}{Seznam obrázků}
+	\begin{enumerate}
+		\item Vizuální návrh mapové části \dotfill \pageref{fig:ui_map}
+		\item Vizuální návrh přihlašování \dotfill \pageref{fig:login_ui}
+		\item Ukázka herní mechaniky pro odemykání kešky \dotfill \pageref{fig:game_ui}
+		\item Uživatelské rozhraní žebříčku nejlepších hráčů \dotfill \pageref{fig:leaderboard_ui}
+	\end{enumerate}
+
 	
-	\end{document}
+\end{document}
